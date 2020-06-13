@@ -1,0 +1,85 @@
+
+@import "{reactioncommerce:reaction-ui}/client/styles/variables.less";
+@import "{reactioncommerce:reaction-ui}/client/styles/mixins.less";
+
+.search-box-container {
+		text-align: center;
+		padding-top: 20px;
+}
+
+.searchBox {
+	position: relative;
+	float: left;
+	min-width: 220px;
+	width: 50%;
+	padding: 0 5px;
+}
+
+.searchBox input {
+	min-width: 180px;
+}
+
+@media screen and (max-width: 480px) {
+  .searchBox {
+		float: none;
+		width: 80%;
+		margin: 0 auto 10px auto;
+  }
+}
+@media screen and (min-width: 480px) {
+  .searchBox {
+		padding-left: 20px;
+		text-align: left;
+  }
+}
+
+@media screen and (min-width: 767px) {
+	.search-box-container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.searchBox input {
+		width: 90%;
+	}
+}
+
+.searchBox label {
+	white-space: nowrap;
+}
+
+.search-item-price {
+	float: right;
+}
+
+.input-clear-icon {
+	margin-left: -24px;
+	margin-right: 20px;
+}
+
+#geocoderResultContainer {
+	position: absolute;
+  top: -35px;
+  min-width: 200px;
+}
+@media screen and (max-width: 480px) {
+  #geocoderResultContainer {
+		top: -8px;
+		left: 20px;
+		padding: 2px;
+  }
+}
+
+.meal-time-wrapper {
+  padding-top: 10px;
+}
+
+@media screen and (min-width: @screen-xs-min) {
+  .meal-time-wrapper .searchBoxMealDinner {
+    padding-left: 10px;
+  }
+}
+
+.tagFilter {
+	margin-top:20px;
+}

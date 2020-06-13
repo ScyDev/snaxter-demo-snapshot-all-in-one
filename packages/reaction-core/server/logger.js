@@ -1,0 +1,2 @@
+
+ReactionCore.Log = Logger;

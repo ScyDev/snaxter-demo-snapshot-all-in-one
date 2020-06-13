@@ -1,0 +1,281 @@
+
+@import "{reactioncommerce:reaction-ui}/client/styles/variables.less";
+@import "{reactioncommerce:reaction-ui}/client/styles/mixins.less";
+
+
+/*
+some corrections to make Snaxter Template work with Reaction
+*/
+
+.mbr-navbar {
+  z-index: 10;
+}
+
+.mbr-navbar--sticky .mbr-navbar__section,
+.mbr-navbar--stuck .mbr-navbar__section {
+    z-index: 1;
+}
+
+.mbr-navbar__section,
+.mbr-navbar--short.mbr-navbar--sticky .mbr-navbar__section,
+.mbr-navbar--short.mbr-navbar--stuck .mbr-navbar__section {
+    z-index: 0;
+}
+
+.mbr-navbar:before, .mbr-navbar__container {
+  height: 0px !important;
+}
+
+.rui.tagnav.vertical .navbar-header {
+  margin-top: 90px;
+}
+
+#menu-0 {
+  disp__lay: none;
+}
+
+.mbr-navbar__container .reaction-navigation-header {
+  width: 90%;
+  /*padding-top: 10px;*/
+}
+
+div.product-variants .form-control {
+  padding: 6px 12px;
+}
+
+.variant-edit-form {
+  background-color: transparent;
+}
+
+.variant-form.well,
+.variant-edit-form {
+  background-color: #fafafa;
+  border: 0;
+}
+
+.variant-form .form-control {
+  border-width: 1px;
+}
+
+.btn.btn-success.add-to-cart-block {
+  padding: 6px 12px;
+}
+
+.add-to-cart-block input#add-to-cart-quantity {
+  padding: 6px 12px;
+  border: 0;
+  margin-right: 5px;
+}
+
+.btn-block a:hover {
+  color: #ffffff !important;
+}
+
+.accounts-dialog.dropdown-menu .btn-block {
+  padding: 9px auto !important;
+}
+
+@media screen and (max-width: 767px) {
+  .container-lg {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+  }
+}
+
+.product-list .table > tbody > tr > td.no-border,
+.backend-product-list .table > tbody > tr > td.no-border {
+  border-top: 0 !important;
+}
+
+.product-info-block {
+  float: left;
+  width: 150px;
+  margin-bottom:
+  20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .product-info-block {
+    float: none;
+    min-width: 200px;
+  }
+}
+
+.product-desc {
+  min-width: 300px;
+}
+
+#btn-checkout {
+  margin-bottom: 20px;
+}
+
+.cart-alert .cart-alert-checkout {
+  height: auto;
+}
+
+.form-control {
+  padding: 6px 12px !important;
+}
+
+.product-detail-map h2,
+.product-detail-map div.address-text {
+  padding-left: 20px;
+}
+
+@media screen and (min-width: @screen-xs-max) {
+  #title {
+    font-size: 35px;
+  }
+  .col-xs-8 .price {
+    font-size: 25px;
+    margin: 0px 0px 0px -14px;
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .container-main {
+      padding: 20px 10px 135px 10px;
+  }
+  #title {
+    font-size: 25px;
+  }
+  .col-xs-8 .price {
+    font-size: 20px;
+  }
+  .product-detail-edit.description-edit,
+  .product-detail-field.description {
+    padding: 15px;
+  }
+
+  .variant-edit-form .form-group {
+    width: 100%;
+  }
+
+  .btn.btn-success.add-to-cart-block {
+    margin-left: 15px;
+    width: 90%
+  }
+
+  .btn.btn-success.add-to-cart-block .add-to-cart-text {
+    display: inline;
+    white-space: normal;
+  }
+}
+
+.profile-edit-page .flex-item .panel {
+  width: 100%;
+}
+
+.profile-edit-page #galleryDropPane,
+.profile-page #galleryDropPane {
+  max-width: 300px;
+  margin: 5px auto 20px auto;
+}
+
+.double-column {
+  clear: both;
+}
+
+@media screen and (max-width: @screen-xs-min) {
+  #logged-in-display-name {
+    display: none;
+  }
+}
+
+.mbr-navbar--open {
+  z-index: 4;
+}
+
+// fix for iPhone 6, where flex is broken and display the products in 2 columns
+@media screen and (max-width: @screen-xs-max) {
+  .product-grid-list {
+    display: block;
+  }
+  .product-grid-item.product-small {
+      width: 100%;
+  }
+}
+
+.cart-completed-orders > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#btn-upload {
+      white-space: normal;
+}
+
+.admin .member-list-item-profile {
+  display: block;
+}
+
+.product-grid-item .overlay-title {
+  text-overflow: ellipsis;
+}
+
+.product-list h3 {
+  text-overflow: ellipsis;
+}
+
+.title h1 .product-detail-field.title {
+  word-wrap: break-word;
+}
+
+p.textForSpinner {
+  padding-top: 145px;
+  font-size: 3rem;
+  color: #ABABAB;
+}
+
+div.spinnerBox {
+  position:relative; // to make sure spinner centers vertically in thix box
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.rui.tagnav .navbar-items {
+  overflow-y: visible;
+}
+
+#addressBookAddForm .row:first-child .form-group:first-child,
+#addressBookEditForm .row:first-child .form-group:first-child { /* hide country */
+  display: none;
+}
+
+.product-grid-item .for-sale-on-date,
+.product-grid-item .location-text,
+.product-grid-item .inventory-text {
+  text-align: left;
+}
+
+.product-grid-item .info-icon {
+  padding-top: 4px;
+  width: 20px;
+  float: left;
+}
+
+.product-grid-item .info-text {
+  padding-left: 20px;
+}
+
+.product-grid-item .currency-symbol {
+  font-size: 18px;
+}
+
+#msg-box4-10 .mbr-buttons__btn {
+      margin-bottom: 5px;
+}
+
+.scydev-link {
+  white-space: nowrap;
+}
+
+.scydev-logo {
+  padding-right: 10px;
+  vertical-align: top;
+}

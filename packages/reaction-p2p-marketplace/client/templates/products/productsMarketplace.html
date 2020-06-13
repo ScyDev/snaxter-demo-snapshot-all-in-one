@@ -1,0 +1,12 @@
+<template name="productsMarketplace">
+  {{> searchBox searchBoxOptions }}
+
+  <div class="container-main">
+    {{> productsViewSwitcher viewSwitcherOptions }}
+
+    {{> marketplaceProductGrid productsViewOptions }}
+
+    {{> marketplaceProductList productsViewOptions }}
+  </div>
+
+</template>

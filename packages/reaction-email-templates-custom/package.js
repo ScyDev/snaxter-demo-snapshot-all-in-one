@@ -1,0 +1,42 @@
+// Email Templates
+Package.describe({
+  summary: "Reaction Email Templates - set of basic email templates",
+  name: "scydev:reaction-email-templates-custom",
+  documentation: "README.md",
+  version: "0.2.0"
+});
+
+Package.onUse(function (api) {
+  api.versionsFrom("METEOR@1.2");
+  api.use("ecmascript");
+  api.use("check");
+  api.use("reactioncommerce:reaction-collections@2.0.1");
+  api.use("meteorhacks:ssr@2.2.0");
+  api.imply("meteorhacks:ssr");
+
+  // register reaction package
+  // api.addFiles("server/register.js", "server");
+
+  // define ReactionEmailTemplate
+  api.addFiles("templates.js", "server");
+
+  // Email Templates
+  api.addAssets("templates/checkout/checkoutLogin.html", "server");
+  api.addAssets("templates/coreDefault.html", "server");
+
+  api.addAssets("templates/orders/new.html", "server");
+  api.addAssets("templates/orders/newSellerNotification.html", "server");
+  api.addAssets("templates/orders/coreOrderCompleted.html", "server");
+  api.addAssets("templates/orders/coreOrderShippingInvoice.html", "server");
+  api.addAssets("templates/orders/coreOrderShippingSummary.html", "server");
+  api.addAssets("templates/orders/coreOrderShippingTracking.html", "server");
+
+  // Accounts Email Templates
+  api.addAssets("templates/accounts/sendWelcomeEmail.html", "server");
+  api.addAssets("templates/accounts/inviteShopMember.html", "server");
+
+  // Products Email Templates
+  api.addAssets("templates/products/reviewProduct.html", "server");
+
+  api.export("ReactionEmailTemplate");
+});

@@ -10,7 +10,7 @@ set -e
 # set default meteor values if they arent set
 : ${PORT:="80"}
 : ${ROOT_URL:="http://localhost"}
-: ${MONGO_URL:="mongodb://127.0.0.1:27017/meteor"}
+: ${MONGO_URL:="mongodb://snaxter-portfolio-mongo:27017/meteor"}
 
 # set default node executable
 : ${NODE:="node"}

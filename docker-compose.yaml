@@ -5,12 +5,8 @@ services:
   snaxter-portfolio-demo:
     container_name: snaxter-portfolio-demo
     build:
-      context: https://0d4c7d450b948fe7437be92f2da39220b8f7feaf@github.com/ScyDev/reaction.git#deploy/portfolio-demo
-      args:
-        - GITHUB_AT=0d4c7d450b948fe7437be92f2da39220b8f7feaf
+      context: https://github.com/ScyDev/snaxter-demo-snapshot-all-in-one.git
       # dockerfile: reaction.dev.src.docker
-      # args:
-      #   buildno: 1
     # volumes:
     #   - "./:/var/www/src/"
     ports:

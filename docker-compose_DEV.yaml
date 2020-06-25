@@ -2,6 +2,16 @@ version: '2'
 
 services:
 
+  snaxter-portfolio-mongo:
+    container_name: snaxter-portfolio-mongo
+    image: mongo:3.0
+    #restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: lolz
+    expose:
+      - 27017
+
   snaxter-portfolio-demo:
     container_name: snaxter-portfolio-demo
     build:
@@ -10,6 +20,9 @@ services:
       # args:
       #   buildno: 1
     volumes:
-      - "/media/thluks/PHOBOS_II/PROJECTS/04 OLD/Snaxter/meteor/reaction:/var/www/src/"
+      - ".:/var/www/src/"
+      # - "/media/thluks/PHOBOS_II/PROJECTS/04 OLD/Snaxter/meteor/reaction:/var/www/src/"
+    links:
+      - snaxter-portfolio-mongo:snaxter-portfolio-mongo
     ports:
       - 80:3000

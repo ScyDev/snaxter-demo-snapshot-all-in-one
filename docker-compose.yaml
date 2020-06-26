@@ -5,9 +5,19 @@ services:
   snaxter-portfolio-demo:
     container_name: snaxter-portfolio-demo
     build:
-      context: https://github.com/ScyDev/snaxter-demo-snapshot-all-in-one.git
-      # dockerfile: reaction.dev.src.docker
-    # volumes:
-    #   - "./:/var/www/src/"
+      context: "./" # https://github.com/ScyDev/snaxter-demo-snapshot-all-in-one.git
+    volumes:
+      - "./:/var/www/src/"
     ports:
+      - 8082:3000
       - 80:3000
+    expose:
+      - 3000
+#    restart: always
+    environment:
+      VIRTUAL_HOST: demo-snaxter.scydev.ch
+      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: demo-snaxter.scydev.ch
+      LETSENCRYPT_EMAIL: lets-encrypt-certs@scydev.ch
+#    networks:
+#      - frontend
